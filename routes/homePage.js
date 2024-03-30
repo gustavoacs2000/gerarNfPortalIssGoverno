@@ -1,9 +1,17 @@
-import express  from "express";
+import express from "express";
+import { routeExecutarAPI } from "./executarAPI.js";
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
     console.log(`HomePage chamada`);
-    res.json({testando:'Teste realizado com sucesso'})
+    res.render('home',{
+        title:'Página Inicial',
+        explanation:'Testando'
+    });
+    //res.json({ testando: 'Teste realizado com sucesso' })
 });
 
-export {router}
+router.use('/login', routeExecutarAPI);
+
+export { router };
