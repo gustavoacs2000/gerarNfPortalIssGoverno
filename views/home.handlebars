@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+    <h1 class="title">{{title}}</h1>
+    <p>{{explanation}}</p>
+    <div class="images">
+        <!-- Divs que receberão as imagens -->
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+
+        <form action="/emitirNotaFiscal" method="post">
+            <div class="form-group">
+                <label for="login">Login:</label>
+                <input type="text" id="login" name="login" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" required>
+            </div>
+            <button type="submit">Buscar Informações</button>
+    </div>
+</body>
+
+</html>
